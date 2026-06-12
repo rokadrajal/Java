@@ -1,23 +1,64 @@
 // find random number
 
-var num = parseInt(Math.random()*100);
-console.log(parseInt(Math.random()*100));
+let playagain = true;
 
-for(;;)
-{
-    let number = prompt("Enter the number :");
+while (playagain) {
+    var attempt = 0;
+    var maximum = 10;
+    var flag = false;
 
-    if(num > number)
-    {
-        alert("Guess Higher Number");
+    var num = parseInt(Math.random() * 100);
+    console.log("Random Number :",num);
+
+
+    while (attempt < maximum) {
+        let number = Number(prompt("Enter the number :"));
+
+        if (number != number) {
+            alert("Please enter a valid number!");
+            continue;
+        }
+
+        if (number < 1 || number > 100) {
+            alert("Number must be between 1 and 100!");
+            continue;
+        }
+
+        attempt++;
+
+
+        if (num > number) {
+            alert("Too High!");
+        }
+        else if (num == number) {
+            alert("Congratulation! You Win!");
+            alert("Total attempt :" + attempt);
+            flag = true;
+            break;
+        }
+        else {
+            alert("Too Low!");
+        }
     }
-    else if(num == number)
-    {
-        alert("Number is Correct");
-        break;
+
+
+
+    if (flag == false) {
+        alert("Game Over!");
+        alert("Correct Number :" + num);
     }
-    else
-    {
-        alert("Guess Lower Number"); 
+
+    let choice = prompt("Do you want to play again? (yes/No)");
+
+    if (choice === "yes") {
+        playagain = true;
     }
+    else {
+        alert("Thank You for Playing!");
+        playagain = false;
+    }
+
 }
+
+
+
