@@ -96,3 +96,26 @@ else
 }
 
 
+
+// truthy 
+// if(true){
+//     // code 
+// }else{
+//     //code 
+// }
+
+// if(true);{     
+//     console.log(true); bane print thay
+// }{
+//     console.log(false);
+// }
+
+// if(0)    single line hoy tyare {} no karo to chale
+//     console.log(true);
+//     console.log("Extra");  <== no chale second line 6e aetle 
+// else
+//     console.log(false);
+
+
+
+

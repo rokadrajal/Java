@@ -1,0 +1,15 @@
+Factorial : 
+5! = 1*5x4x3x2x1! = 120
+
+
+
+function Factorial(n){
+	fact = 1;  // 1*5
+	while(n>1){
+		fact*=n;      
+		n--;
+	}
+	return fact;
+}
+
+console.log (Factorial(5));
