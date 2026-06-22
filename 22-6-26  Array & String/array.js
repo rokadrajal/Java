@@ -50,6 +50,8 @@ arr.unshift(100,true);
 console.log(arr);
 
 
+
+
 // 4. shift
 // remove element in 0 index
 // return : remove element

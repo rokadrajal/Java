@@ -1,4 +1,6 @@
- // function initialization + declaration
+// Normal Function / Name Function
+
+// function initialization + declaration
 
 function functionname() {
     //code
