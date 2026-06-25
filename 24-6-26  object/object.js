@@ -42,6 +42,8 @@ var user = {
 user.biodata();
 
 
+
+
 // 1. How to Access Object
 console.log(user);
 
