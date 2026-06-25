@@ -19,6 +19,8 @@ console.log(" ");
 
 console.log("lastindexOf : ");
 console.log(arr.lastIndexOf(8));
+console.log(arr.lastIndexOf(21));
+
 console.log(" ");
 
 
