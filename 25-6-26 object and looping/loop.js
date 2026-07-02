@@ -13,6 +13,8 @@ console.log(user);
 for (const key in user) {
    console.log(key,user[key]);
 }
+console.log(" ");
+
 
 
 // 2. computing object : []
@@ -35,6 +37,8 @@ var obj2 = {
 }
 
 console.log(obj2); // OUTPUT = fname : radhe , lname : patel
+console.log(" ");
+
 
 
 
@@ -67,6 +71,7 @@ console.log(data["address"]["city"]);
 
 
 
+
 var data1 = {
     fname : "ram",
     lname : "patel",
@@ -79,6 +84,8 @@ console.log(data1);
 
 console.log(data1.address); // address is not available aetle undefind
 console.log(data1["address"]);
+console.log(" ");
+
 
 // console.log(data1.address.city); // address is not available aetle undefind aetle city is not possiable aetle error
 // console.log(data1["address"].city);
@@ -95,6 +102,8 @@ console.log(data1?.address?.city); // address is not available aetle undefind pa
 console.log(data1?.["address"]?.city);
 console.log(data1?.address?.["city"]);
 console.log(data1?.["address"]?.["city"]);
+console.log(" ");
+
 
 
 // 5.Array in object
@@ -111,6 +120,8 @@ var product = {
 console.log(product);
 console.log(product.hobbies);
 console.log(product.hobbies[0]);
+console.log(" ");
+
 
 
 // 6. object in array
@@ -123,6 +134,51 @@ var arr = [
 
 console.log(arr);
 console.log(arr[1]);
+console.log(" ");
+
+
+
+// 7 . Array De-structuring
+
+var arr = [12 , 7 , 23 , 120 , 67];
+console.log(arr);
+console.log(arr[2]);
+
+var [,n1,,n2] = arr;
+console.log(n1);
+console.log(n2);
+
+
+console.log(" ");
+
+
+// 8 . Object De-structuring
+
+var list = {
+    fname : "ram",
+    lname : "patel",
+    age : 18,
+    gender : "male",
+    contactNo : 1234567890,
+   
+    address : {
+        city : "rajkot",
+        state : "Gujarat",
+    }
+
+}
+console.log(list);
+console.log(list.address.state);
+
+var { address : {city} , fname : firstname} = list;
+console.log(city);
+console.log(firstname);
+
+
+
+
+
+
 
 
 
