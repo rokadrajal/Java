@@ -72,10 +72,19 @@
         .reset:hover{
             transform:translate(0px , -10px);
         }
+
+        p{
+            background-color: antiquewhite;
+            padding: 100px;
+            display: none;
+            position: absolute;
+            
+        }
     </style>
 </head>
 
 <body>
+    <p>Time out</p>
     <div>
         <span>10</span>
         <br>
@@ -93,6 +102,8 @@
             id = setInterval(() => {
                 if (index == 0) {
                     clearInterval(id);
+                    // alert("Time out");
+                    document.querySelector('p').style.display = "block";
                 }
                 document.querySelector('span').innerText = index--;
 
