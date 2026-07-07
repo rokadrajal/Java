@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(to top, rgb(0, 255, 255), rgb(22, 144, 225));
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div {
+            background-color: white;
+            padding: 70px 90px;
+            border-radius: 20px;
+        }
+
+        span {
+            font-size: 50px;
+            font-weight: bold;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+
+        .start,
+        .end,
+        .reset {
+            background-color: rgb(250, 250, 127);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            font-size: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            transition: all 0.5s ease-in-out 0s;
+
+
+        }
+
+        .start:hover{
+            transform:translate(0px , -10px);
+        }
+
+
+        .end {
+            background-color: lightgreen;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .end:hover{
+            transform:translate(0px , -10px);
+        }
+
+        .reset {
+            background-color: rgb(245, 130, 147);
+        }
+
+        .reset:hover{
+            transform:translate(0px , -10px);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span>10</span>
+        <br>
+        <button class="start">Start</button>
+        <button class="end">End</button>
+        <button class="reset">Reset</button>
+    </div>
+
+    <script>
+        var id;
+        document.querySelector('.start').onclick = function () {
+
+            var index = document.querySelector('span').innerText;
+
+            id = setInterval(() => {
+                if (index == 0) {
+                    clearInterval(id);
+                }
+                document.querySelector('span').innerText = index--;
+
+            }, 1000);
+        }
+
+        document.querySelector('.end').onclick = function(){
+            clearInterval(id);
+        }
+
+        document.querySelector('.reset').onclick = function(){
+            clearInterval(id);
+            document.querySelector('span').innerText = "10";
+        }
+    </script>
+</body>
+
+</html>

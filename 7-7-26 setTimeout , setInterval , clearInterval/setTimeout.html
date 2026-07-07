@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: skyblue;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+        div{
+            background-color: lightpink;
+            color: black;
+            font-family:'Times New Roman', Times, serif;
+            font-size: 30px;
+            padding: 40px;
+            display: none;
+            position: relative;
+        }
+        span{
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>❌</span>
+        This is a Js
+    </div>
+
+    <script>
+        // once time 
+        setTimeout(()=>{
+            document.querySelector('div').style.display = "block";
+        },3000);
+
+        document.querySelector('span').onclick = function()
+        {
+            document.querySelector('div').style.display = "none";
+
+        }
+    </script>
+    <!--  1s = 1000ms -->
+
+
+</body>
+</html>
