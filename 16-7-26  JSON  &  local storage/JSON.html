@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // How to Print local Storage
+        console.log(localStorage);
+
+        // How to Add new Data in a Local Storage
+        // localStorage.setItem("FirstName","Ram");
+
+        const user = [
+            {
+                firstName : "Ram",
+                LastName : "Patel",
+                age : 18,
+            }
+        ];
+        
+        // How to Add new JSON Data in a Local Storage
+        localStorage.setItem("user",JSON.stringify(user));  // JSON ne string ma change karva mate 
+
+        // How to Get JSON data from Local Storage.
+        console.log(JSON.parse(localStorage.getItem("user")));  // string ne JSON  ma change karva mate 
+
+        // How to Print Session Storage
+        console.log(sessionStorage);
+        
+
+    </script>
+</body>
+
+</html>
