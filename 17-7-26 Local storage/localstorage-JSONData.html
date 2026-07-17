@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 2.JSON => Array of Object formate , multiple data 
+
+        // add
+        console.log(localStorage);
+
+        const user = [
+            {
+                fname : "radha",
+                lname : "patel",
+                gender : "female",
+            }
+        ]
+
+        localStorage.setItem("users",JSON.stringify(user));
+        user.push({"fname":"sita","gender":"female","lname":"patel"});
+        user.push({"fname":"dharti","gender":"female","lname":"patel"});
+        localStorage.setItem("users",JSON.stringify(user));
+
+        
+        // retrive
+        console.log(JSON.parse(localStorage.getItem("users")));
+
+
+        // update
+        var Data = user.map((data)=>{
+        
+            return (data.fname == "radha")? {...data , "fname" : "krushna" , "gender" : "male"} : data;
+        }); 
+        console.log(Data);
+        localStorage.setItem("users",JSON.stringify(Data));
+
+
+        
+        // Delete
+
+        var Deletedata = Data.filter((data)=>{
+            // if(data.gender == "male"){
+            //     delete data.gender;
+            // }
+            // return data;
+           return data.gender != "male";
+        })
+        console.log(Deletedata);
+        localStorage.setItem("users",JSON.stringify(Deletedata));
+
+        
+
+        
+    </script>
+</body>
+</html>

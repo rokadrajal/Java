@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log(localStorage);
+        // Data
+        // 1.Normal Data
+        // 2.JSON Data
+
+        // 1.Normal Data => string maj hoy , single data store thay
+
+        // add
+        localStorage.setItem("fname", "Ram");
+        localStorage.setItem("lname", "Patel");
+        localStorage.setItem("age", 20);
+
+        // retrive(print)
+        console.log(localStorage.getItem("fname"));
+        console.log(localStorage);
+
+
+        // update
+        localStorage.setItem("fname", "sita");
+        localStorage.setItem("contact", 1234567890);
+        console.log(localStorage.getItem("fname"));
+        console.log(localStorage.getItem("contact"));
+        console.log(localStorage);
+
+
+        // delete
+        localStorage.removeItem("age");
+        console.log(localStorage);
+
+        // localStorage.clear();
+
+
+    </script>
+</body>
+
+</html>
